@@ -1,5 +1,6 @@
 declare module 'react-native-ico-pixel' {
     import { ReactNode } from 'react';
+    import { SvgProps, AdditionalProps } from 'react-native-svg';
 
     type iconNames = 'account-box' |
       'account' |
@@ -384,7 +385,7 @@ declare module 'react-native-ico-pixel' {
       badge?: number | string | badgeTypeObj;
     }
 
-    const Icon: (props: IconProps) => ReactNode;
+    const Icon: (props: IconProps & SvgProps & AdditionalProps) => ReactNode;
 
     export { iconNames };
     export default Icon;
